@@ -4,6 +4,6 @@ import new_todo from './new-todo.js'
 export default (todos) => `
   <div>
     ${new_todo()}
-    ${todos.reduce((acc, todo) => acc + todo_item(todo), '')}
+    ${todos.map(todo_item).join('')}
   </div>
 `
